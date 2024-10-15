@@ -2,6 +2,7 @@
   <div class="container">
     <div class="sidebar">
       <div class="header">
+        <!-- make the name clikable -->
         <div class="logo">
           <svg 
             width="138" 
@@ -24,9 +25,11 @@
 
         <ul class="menu">
           <li>
-            <a 
+
+
+            <router-link
               class="active" 
-              href="#"
+              to="/reports"
             >
               <svg 
                 width="20.93"
@@ -38,11 +41,15 @@
               </svg>
 
               Reports
-            </a>
+            </router-link>
+
+
           </li>
 
           <li>
-            <a href="#">
+
+
+            <router-link to="#!">
               <svg 
                 width="24" 
                 height="24" 
@@ -53,11 +60,15 @@
               </svg>
 
               Library
-            </a>
+            </router-link>
+
+
           </li>
 
           <li>
-            <a href="#">
+
+
+            <router-link to="#!">
               <svg 
                 width="26.09"
                 height="24"
@@ -72,11 +83,15 @@
               </svg>
 
               People
-            </a>
+            </router-link>
+
+
           </li>
 
           <li>
-            <a href="#">
+
+
+            <router-link to="#!">
               <svg 
                 width="26.09"
                 height="24"
@@ -91,7 +106,9 @@
               </svg>
 
               Activities
-            </a>
+            </router-link>
+
+
           </li>
         </ul>
 
@@ -101,7 +118,9 @@
           </h3>
 
           <li>
-            <a href="#">
+
+
+            <router-link to="#!">
               <svg 
                 width="24" 
                 height="24" 
@@ -112,11 +131,15 @@
               </svg>
 
               Get Started
-            </a>
+            </router-link>
+
+
           </li>
 
           <li>
-            <a href="#">
+
+
+            <router-link to="#!">
               <svg
                 width="24"
                 height="24"
@@ -138,7 +161,9 @@
               </svg>
 
               Settings
-            </a>
+            </router-link>
+
+
           </li>
         </ul>
       </div>
@@ -146,7 +171,7 @@
       <div class="profile">
         <div class="profile-content">
           <svg 
-            width="34" 
+            width="34"
             height="34" 
             viewBox="0 0 34 34" 
             fill="none" 
@@ -183,6 +208,7 @@
           </svg>
             
           <div>
+            <!-- make the name clikable -->
             <h3 class="name">
               Sam Wheeler
             </h3>
@@ -198,7 +224,7 @@
     <div class="content">
       <div class="header">
         <h1>
-          Reports
+          {{ header_title }}
         </h1>
         
         <div class="download">
@@ -224,6 +250,12 @@
 <script>
   export default {
     name: "Layout",
+    props: {
+      header_title: {
+        type: String,
+        required: true,
+      },
+    },
   };
 </script>
 
